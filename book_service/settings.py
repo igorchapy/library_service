@@ -99,9 +99,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "library_service.wsgi.application"
 
-# ---------------------------
-# DATABASE
-# ---------------------------
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
@@ -109,9 +107,7 @@ DATABASES = {
     }
 }
 
-# ---------------------------
-# AUTH & PASSWORDS
-# ---------------------------
+
 AUTH_USER_MODEL = "users.User"
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -121,17 +117,13 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
 
-# ---------------------------
-# INTERNATIONALIZATION
-# ---------------------------
+
 LANGUAGE_CODE = "en-us"
 TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = False
 
-# ---------------------------
-# STATIC & MEDIA FILES
-# ---------------------------
+
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "static"
 
@@ -140,9 +132,7 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# ---------------------------
-# DRF + JWT CONFIGURATION
-# ---------------------------
+
 REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     "DEFAULT_AUTHENTICATION_CLASSES": (
@@ -174,14 +164,10 @@ SIMPLE_JWT = {
     "ALGORITHM": "HS256",
 }
 
-# ---------------------------
-# STRIPE CONFIG
-# ---------------------------
+
 STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", "")
 STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY", "")
 
-# ---------------------------
-# TELEGRAM CONFIG
-# ---------------------------
+
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")

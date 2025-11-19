@@ -3,10 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/Library_Service_Project.iml" filepath="$PROJECT_DIR$/.idea/Library_Service_Project.iml" />
 =======
       <module fileurl="file://$PROJECT_DIR$/.idea/REST_practice.iml" filepath="$PROJECT_DIR$/.idea/REST_practice.iml" />
 >>>>>>> 309c6f1 (NEWpr)
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/Library_Service_Project.iml" filepath="$PROJECT_DIR$/.idea/Library_Service_Project.iml" />
+>>>>>>> 2166171 (Do all)
     </modules>
   </component>
 </project>
