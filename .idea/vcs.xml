@@ -3,9 +3,12 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <mapping directory="$PROJECT_DIR$/REST_practice" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/REST_project1" vcs="Git" />
 >>>>>>> 309c6f1 (NEWpr)
+=======
+>>>>>>> 713be24 (Solutiob)
   </component>
 </project>

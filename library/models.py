@@ -38,14 +38,7 @@ class Book(models.Model):
     def __str__(self):
         return f"{self.title} by {self.author}"
 
-
-# ---------------------------
-# BORROWING MODEL
-# ---------------------------
-class Borrowing(models.Model):
-    borrow_date = models.DateField()
-    expected_return_date = models.DateField()
-    actual_return_date = models.DateField(null=True, blank=True)
+3
     book = models.ForeignKey(Book, on_delete=models.CASCADE, related_name="borrowings")
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="borrowings")
 
