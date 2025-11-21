@@ -95,4 +95,6 @@ This project is a **Library Management System API** built with a microservices a
 - PostgreSQL or other supported database
 - Redis (for Celery or Django Q backend)
 - Stripe account and API keys
+
 - Telegram bot token and chat IDs
+- Telegram bot 
