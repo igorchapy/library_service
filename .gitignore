@@ -205,11 +205,27 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Virtual environments
+venv/
+.venv/
+
+# Python cache
 __pycache__/
 *.pyc
-venv/
-.env
-.env.*
+
+# IDE
 .idea/
 .vscode/
-*.sqlite3
+
+# Databases
+*.db
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Testing
+.pytest_cache/
+.mypy_cache/
