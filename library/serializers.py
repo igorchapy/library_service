@@ -3,27 +3,19 @@ from .models import User, Book, Borrowing, Payment
 from notifications.tasks import notify_borrowing_created
 
 
-# ---------------------------
-# USER SERIALIZER
-# ---------------------------
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ["id", "email", "first_name", "last_name", "is_staff"]
 
 
-# ---------------------------
-# BOOK SERIALIZER
-# ---------------------------
 class BookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
         fields = ["id", "title", "author", "cover", "inventory", "daily_fee"]
 
 
-# ---------------------------
-# BORROWING SERIALIZER
-# ---------------------------
+
 class BorrowingSerializer(serializers.ModelSerializer):
     user = UserSerializer(read_only=True)  # показує info про користувача
     book = BookSerializer(read_only=True)  # показує info про книгу
@@ -52,9 +44,6 @@ class BorrowingSerializer(serializers.ModelSerializer):
         return super().create(validated_data)
 
 
-# ---------------------------
-# PAYMENT SERIALIZER
-# ---------------------------
 class PaymentSerializer(serializers.ModelSerializer):
     borrowing = BorrowingSerializer(read_only=True)
     borrowing_id = serializers.PrimaryKeyRelatedField(
