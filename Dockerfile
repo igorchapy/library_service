@@ -2,18 +2,21 @@
 
 FROM python:3.11-slim
 
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential curl && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
+    build-essential \
+    curl \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
-RUN pip install --no-cache-dir poetry
+COPY requirements.txt /app/
 
-COPY pyproject.toml poetry.lock /app/
-
-RUN poetry config virtualenvs.create false \
-    && poetry install --no-interaction --no-ansi --only main
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir -r requirements.txt
 
 COPY . /app/
 
