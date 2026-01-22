@@ -97,8 +97,6 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "library_service.wsgi.application"
-
 
 DATABASES = {
     "default": {
