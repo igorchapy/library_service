@@ -98,3 +98,45 @@ This project is a **Library Management System API** built with a microservices a
 
 - Telegram bot token and chat IDs
 - Telegram bot 
+
+Running the Project with Docker
+
+Prerequisites
+
+Make sure you have the following installed:
+
+Docker (version 20+)
+
+Docker Compose (optional, if you plan to extend the setup)
+
+Verify Docker installation:
+
+docker --version
+
+Build the Docker Image
+
+From the project root directory, run:
+
+docker build -t django-app .
+
+
+Where:
+
+django-app is an arbitrary name for the Docker image
+
+Run the Container
+
+After the image is built, start the container:
+
+docker run -p 8000:8000 django-app
+
+
+Or run it in detached mode:
+
+docker run -d -p 8000:8000 django-app
+
+Access the Application
+
+Once the container is running, the application will be available at:
+
+http://localhost:8000
